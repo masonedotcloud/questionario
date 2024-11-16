@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
+         version="6.0"
+         metadata-complete="true">
+    <display-name>Archetype Created Web Application</display-name>
+
+
+    <listener>
+        <listener-class>functionality.WebXmlParams</listener-class>
+    </listener>
+
+
+    <servlet>
+        <servlet-name>Index</servlet-name>
+        <servlet-class>Index</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Index</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Questionario_view</servlet-name>
+        <servlet-class>questionnaire.View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Questionario_view</servlet-name>
+        <url-pattern>/questionnaire/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Questionario_process</servlet-name>
+        <servlet-class>questionnaire.Process</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Questionario_process</servlet-name>
+        <url-pattern>/questionnaire/process</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Questionario_list</servlet-name>
+        <servlet-class>questionnaire.List</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Questionario_list</servlet-name>
+        <url-pattern>/questionnaire/list</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Questionario_list_2</servlet-name>
+        <servlet-class>questionnaire.List</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Questionario_list_2</servlet-name>
+        <url-pattern>/questionnaire/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Profile_view</servlet-name>
+        <servlet-class>profile.View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile_view</servlet-name>
+        <url-pattern>/profile/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Profile_logout</servlet-name>
+        <servlet-class>profile.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile_logout</servlet-name>
+        <url-pattern>/profile/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Profile_delete</servlet-name>
+        <servlet-class>profile.Delete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile_delete</servlet-name>
+        <url-pattern>/profile/delete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Profile_questionnaire_view</servlet-name>
+        <servlet-class>profile.questionnaire.View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile_questionnaire_view</servlet-name>
+        <url-pattern>/profile/questionnaire/view</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Profile_questionnaire_list</servlet-name>
+        <servlet-class>profile.questionnaire.List</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile_questionnaire_list</servlet-name>
+        <url-pattern>/profile/questionnaire/list</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Profile_questionnaire_delete</servlet-name>
+        <servlet-class>profile.questionnaire.Delete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Profile_questionnaire_delete</servlet-name>
+        <url-pattern>/profile/questionnaire/delete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Login_view</servlet-name>
+        <servlet-class>form.login.View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login_view</servlet-name>
+        <url-pattern>/form/login/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Login_process</servlet-name>
+        <servlet-class>form.login.Process</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Login_process</servlet-name>
+        <url-pattern>/form/login/process</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Register_view</servlet-name>
+        <servlet-class>form.register.View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register_view</servlet-name>
+        <url-pattern>/form/register/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Register_process</servlet-name>
+        <servlet-class>form.register.Process</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Register_process</servlet-name>
+        <url-pattern>/form/register/process</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Status</servlet-name>
+        <servlet-class>manager.Status</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Status</servlet-name>
+        <url-pattern>/status</url-pattern>
+    </servlet-mapping>
+
+
+    <filter>
+        <filter-name>CacheFilter</filter-name>
+        <filter-class>manager.CacheFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CacheFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
+    <servlet>
+        <servlet-name>Admin_logout</servlet-name>
+        <servlet-class>admin.Logout</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_logout</servlet-name>
+        <url-pattern>/admin/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin</servlet-name>
+        <servlet-class>admin.Index</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin</servlet-name>
+        <url-pattern>/admin</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Admin_dashboard</servlet-name>
+        <servlet-class>admin.Dashboard</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_dashboard</servlet-name>
+        <url-pattern>/admin/dashboard</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Admin_user_delete</servlet-name>
+        <servlet-class>admin.user.Delete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_user_delete</servlet-name>
+        <url-pattern>/admin/user/delete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Admin_user_questionnaire_view</servlet-name>
+        <servlet-class>admin.user.questionnaire.View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_user_questionnaire_view</servlet-name>
+        <url-pattern>/admin/user/questionnaire/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_user_questionnaire_list</servlet-name>
+        <servlet-class>admin.user.questionnaire.List</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_user_questionnaire_list</servlet-name>
+        <url-pattern>/admin/user/questionnaire/list</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_user_questionnaire_delete</servlet-name>
+        <servlet-class>admin.user.questionnaire.Delete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_user_questionnaire_delete</servlet-name>
+        <url-pattern>/admin/user/questionnaire/delete</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>Admin_questionnaire_view</servlet-name>
+        <servlet-class>admin.questionnaire.View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_questionnaire_view</servlet-name>
+        <url-pattern>/admin/questionnaire/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_questionnaire_preview</servlet-name>
+        <servlet-class>admin.questionnaire.Preview</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_questionnaire_preview</servlet-name>
+        <url-pattern>/admin/questionnaire/preview</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_questionnaire_list</servlet-name>
+        <servlet-class>admin.questionnaire.List</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_questionnaire_list</servlet-name>
+        <url-pattern>/admin/questionnaire/list</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_questionnaire_list_2</servlet-name>
+        <servlet-class>admin.questionnaire.List</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_questionnaire_list_2</servlet-name>
+        <url-pattern>/admin/questionnaire/</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_questionnaire_delete</servlet-name>
+        <servlet-class>admin.questionnaire.Delete</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_questionnaire_delete</servlet-name>
+        <url-pattern>/admin/questionnaire/delete</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_questionnaire_create</servlet-name>
+        <servlet-class>admin.questionnaire.Create</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_questionnaire_create</servlet-name>
+        <url-pattern>/admin/questionnaire/create</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_login_view</servlet-name>
+        <servlet-class>admin.login.View</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_login_view</servlet-name>
+        <url-pattern>/admin/login/view</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Admin_login_process</servlet-name>
+        <servlet-class>admin.login.Process</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Admin_login_process</servlet-name>
+        <url-pattern>/admin/login/process</url-pattern>
+    </servlet-mapping>
+
+
+    <context-param>
+        <param-name>DB_URL</param-name>
+        <param-value>jdbc:mysql://localhost:3306/</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>DB_NAME</param-name>
+        <param-value>###</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>USER</param-name>
+        <param-value>###</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>PASS</param-name>
+        <param-value>###</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>ADMIN_USER</param-name>
+        <param-value>###</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>ADMIN_PASS</param-name>
+        <param-value>###</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>NAME_SERVLET</param-name>
+        <param-value>Questionario</param-value>
+    </context-param>
+
+</web-app>
+
